@@ -1,0 +1,58 @@
+# ===== Secrets & credentials =====
+.env
+.env.*
+*.env
+secrets.*
+*credentials*
+*.pem
+*.key
+*.pfx
+.databrickscfg
+.netrc
+config.local.*
+
+# Local list of confidential terms used by scripts/prepublish_check.py — NEVER commit
+.sensitive-terms.txt
+
+# ===== Real data (only synthetic data under sample-data/ is allowed) =====
+*.csv
+*.tsv
+*.xlsx
+*.xlsm
+*.xls
+*.parquet
+*.json.gz
+*.db
+*.sqlite
+*.bak
+*.accdb
+!**/sample-data/**/*.csv
+!**/sample-data/**/*.parquet
+
+# ===== Power BI / Fabric =====
+# .pbix embeds data. Publish screenshots, not files.
+*.pbix
+# .pbit and PBIP projects can contain server names in Power Query; review before un-ignoring
+*.pbit
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# ===== Python / notebooks =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ===== Raw notes & drafts that may contain unredacted detail =====
+_private/
+drafts-raw/
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+~$*

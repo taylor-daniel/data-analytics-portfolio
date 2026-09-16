@@ -1,0 +1,12 @@
+# Copy this file to .sensitive-terms.txt (which is git-ignored) and list words that must
+# never appear publicly: one per line, case-insensitive. Lines starting with # are ignored.
+#
+# Examples of what to include:
+#   your employer's name, abbreviations and subsidiaries
+#   internal product names and system names
+#   colleague and manager names
+#   internal server / workspace / database names
+#   policy-number prefixes (e.g. POL/, MTR-)
+#
+ExampleCompanyName
+ExampleProductName
