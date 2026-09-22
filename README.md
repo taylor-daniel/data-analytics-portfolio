@@ -16,7 +16,7 @@ Each case study explains the business question, the data and its challenges, the
 
 | # | Case study | Domain | Core skills | Stack | Status |
 |---|---|---|---|---|---|
-| 01 | Digital Sales & Revenue Analytics | Digital transformation · Revenue | Data transformation at scale, data quality, reconciliation | Databricks · PySpark | 🛠️ In progress |
+| 01 | [Digital Sales & Revenue Analytics](case-studies/digital-sales-revenue-analytics/) | Digital transformation · Revenue | Data transformation at scale, data quality, reconciliation, BI delivery | Databricks · PySpark · Fabric · Power BI | ✅ Published |
 | 02 | HR & Workforce Analytics Suite | Workforce analytics | KPI design, automated reporting, dashboarding | — | 🛠️ In progress |
 
 <!-- Add a row for every new case study. Keep the newest or strongest at the top once there are several. -->
@@ -25,7 +25,7 @@ Each case study explains the business question, the data and its challenges, the
 
 - **Data engineering / ETL:** 01
 - **Data quality & validation:** 01
-- **BI & dashboards:** 02
+- **BI & dashboards:** 01, 02
 - **Workforce / HR analytics:** 02
 
 ---
