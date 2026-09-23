@@ -18,6 +18,7 @@ Each case study explains the business question, the data and its challenges, the
 |---|---|---|---|---|---|
 | 01 | [Digital Sales & Revenue Analytics](case-studies/digital-sales-revenue-analytics/) | Digital transformation · Revenue | Data transformation at scale, data quality, reconciliation, BI delivery | Databricks · PySpark · Fabric · Power BI | ✅ Published |
 | 02 | [HR & Workforce Analytics Suite](case-studies/hr-workforce-analytics/) | Workforce / people analytics | KPI design, data modelling, automated reporting, dashboarding | Databricks · PySpark · Fabric · Power BI · DAX | ✅ Published |
+| 03 | [HR Systems & Process Automation](case-studies/hr-systems-process-automation/) | Digital transformation · HR operations | Requirements gathering, process design, system configuration, change management | HRIS · Excel · Power BI | ✅ Published |
 
 <!-- Add a row for every new case study. Keep the newest or strongest at the top once there are several. -->
 
@@ -26,7 +27,8 @@ Each case study explains the business question, the data and its challenges, the
 - **Data engineering / ETL:** 01
 - **Data quality & validation:** 01
 - **BI & dashboards:** 01, 02
-- **Workforce / HR analytics:** 02
+- **Workforce / HR analytics:** 02, 03
+- **Digital transformation / systems:** 01, 03
 
 ---
 
