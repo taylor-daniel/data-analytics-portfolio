@@ -2,7 +2,7 @@
 
 > **Summary:** Gathered the user requirements, designed the process flows and configured a cloud HR information system that now runs about 27 HR processes end to end, replacing manual, paper and email-based workflows across a financial services group, and owning the system's maintenance, support and vendor relationship afterwards.
 
-`HRIS` `Requirements gathering` `Process automation` `System configuration` `UAT` `Data migration` `Change management` · **Domain:** Digital transformation · HR operations · **Role:** People Data Analyst · **Period:** Feb 2023 – present
+`HRIS` `Requirements gathering` `Process automation` `System configuration` `UAT` `Data migration` `Change management` · **Domain:** Digital transformation · HR operations · **Role:** People Data Analyst · **Period:** Feb 2023 – present · **Scale:** six operating companies within a nine-entity group
 
 ---
 

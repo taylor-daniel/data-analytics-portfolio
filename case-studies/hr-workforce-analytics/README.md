@@ -1,8 +1,8 @@
 # HR & Workforce Analytics Suite: From Manual HR Reports to Automated Workforce and Employee Experience Dashboards
 
-> **Summary:** Replaced a multi-day manual HR reporting cycle with an automated pipeline and a Power BI dashboard suite covering headcount, attrition, workforce composition and employee experience, refreshed weekly and reconciled against the HR system.
+> **Summary:** Replaced a multi-day manual HR reporting cycle with an automated pipeline and a Power BI dashboard suite covering headcount, attrition, workforce composition and employee experience — refreshed weekly, reconciled against the HR system, and cutting manual reporting turnaround by over 60%.
 
-`Databricks` `PySpark` `Delta tables` `Microsoft Fabric` `Power BI` `DAX` · **Domain:** Workforce / people analytics · **Role:** People Data Analyst · **Period:** Feb 2023 – Jun 2026
+`Databricks` `PySpark` `Delta tables` `Microsoft Fabric` `Power BI` `DAX` · **Domain:** Workforce / people analytics · **Role:** People Data Analyst · **Period:** Feb 2023 – Jun 2026 · **Scale:** reporting across nine group entities
 
 ---
 
@@ -97,7 +97,7 @@ As a result, leadership could not easily see consistent, up-to-date workforce tr
 
 ## 11. Business Impact
 
-**Manual work reduced** — A reporting cycle that took several days each month to compile, validate and distribute became a dashboard on a weekly automated refresh. The manual pulling, hand-cleaning and deck-building steps were removed.
+**Manual work reduced** — A reporting cycle that took several days each month to compile, validate and distribute became a dashboard on a weekly automated refresh, cutting manual reporting turnaround by over 60%. The manual pulling, hand-cleaning and deck-building steps were removed.
 
 **Visibility gained**
 
