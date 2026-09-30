@@ -2,7 +2,7 @@
 
 > **Summary:** Built a PySpark transformation and data-quality layer on Databricks that turned raw quote, policy, product and transaction data into a reliable view of product traction, policy sales and premium generated through digital platforms, validated against the transaction system and delivered as a Power BI report.
 
-`Databricks` `PySpark` `Delta / Parquet` `Microsoft Fabric` `Power BI` · **Domain:** Digital transformation · Revenue analytics · **Industry:** Insurance · **Role:** BI & Analytics Engineer · **Period:** 2026
+`Databricks` `PySpark` `Delta / Parquet` `Microsoft Fabric` `Power BI` · **Domain:** Digital transformation · Revenue analytics · **Industry:** Insurance · **Role:** BI & Analytics Engineer · **Period:** 2026 · **Scope:** 3 product categories across 2 digital channels
 
 ---
 
@@ -66,7 +66,7 @@ Management had limited visibility into the performance of digital platforms:
 ## 7. Key Analysis
 - Product traction across digital platforms
 - Policy sales generated through digital channels
-- Premium revenue by channel, source and product
+- Premium revenue by channel, source and product, covering three product categories (motor, travel and household lines) across two digital channels
 - Quote-to-policy conversion
 - Trends over time by year and month
 - Platform comparison by revenue
@@ -89,7 +89,7 @@ The reporting compares how the digital distribution channels (for example a publ
 
 **Decisions enabled** — The reporting was designed to support decisions on which distribution channels and product categories to prioritise and optimise, in order to grow digital revenue and policy volume over time.
 
-**Measures delivered** — Total revenue across all products, revenue by product category, average revenue by product category, quote-to-policy conversion, and policy counts.
+**Measures delivered** — Total revenue across all products, revenue by product category, average revenue by product category, quote-to-policy conversion, and policy counts, across three product categories and two digital channels.
 
 ## 10. My Contribution
 
