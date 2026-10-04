@@ -128,7 +128,7 @@ The reporting compares how the digital distribution channels (for example a publ
 - A full quote-to-policy conversion funnel, rather than a single conversion rate
 
 ## 15. Artefacts
-No code or screenshots from the production solution are published. Illustrative versions of the reporting — revenue by product category and channel, and an indexed monthly trend — are rebuilt on **synthetic** data on the [portfolio site](https://taylor-daniel.github.io/#case-digital). Still planned: a sanitised PySpark example of the standardise → join → classify → aggregate → quality-check pattern on synthetic data, and an architecture diagram with generic system names.
+No code or screenshots from the production solution are published. Illustrative versions of the reporting — revenue by product category and channel, and an indexed monthly trend — are rebuilt on **synthetic** data on the [portfolio site](https://taylor-daniel.github.io/#case-digital). A sanitised, runnable version of the standardise → join → classify → aggregate → quality-check pattern is published separately as [pyspark-data-quality-pipeline](https://github.com/taylor-daniel/pyspark-data-quality-pipeline), built on synthetic data with tests. Still planned: an architecture diagram with generic system names.
 
 ---
 

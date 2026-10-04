@@ -22,6 +22,14 @@ Each case study explains the business question, the data and its challenges, the
 
 <!-- Add a row for every new case study. Keep the newest or strongest at the top once there are several. -->
 
+## Code
+
+| Repository | What it is | Stack |
+|---|---|---|
+| [pyspark-data-quality-pipeline](https://github.com/taylor-daniel/pyspark-data-quality-pipeline) | Runnable pipeline on synthetic insurance data: standardise → join → classify → aggregate, with data-quality checks at every stage and a reconciliation against the source system | PySpark · Python · pytest |
+
+---
+
 ### Browse by skill
 
 - **Data engineering / ETL:** 01
