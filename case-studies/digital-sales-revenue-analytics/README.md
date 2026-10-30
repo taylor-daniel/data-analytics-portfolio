@@ -1,5 +1,7 @@
 # Digital Sales & Revenue Analytics: Building a Trusted View of Digital Channel Performance
 
+> **Latest addition (October 2026):** extended the reporting with an agent dimension — an agent reference table joined to the web revenue table on the agent code, giving agent-level attribution, an agent leaderboard and agent-by-product analysis.
+
 > **Summary:** Built a PySpark transformation and data-quality layer on Databricks that turned raw quote, policy, product and transaction data into a reliable view of product traction, policy sales and premium generated through digital platforms, validated against the transaction system and delivered as a Power BI report.
 
 `Databricks` `PySpark` `Delta / Parquet` `Microsoft Fabric` `Power BI` · **Domain:** Digital transformation · Revenue analytics · **Industry:** Insurance · **Role:** BI & Analytics Engineer · **Period:** 2026 · **Scope:** 3 product categories across 2 digital channels
@@ -30,6 +32,7 @@ Management had limited visibility into the performance of digital platforms:
 | Policy data | Policy information | Policy counts, product and channel attribution |
 | Product reference data | Product and product-category information | Grouping and classification |
 | Transaction data | Premium and transactions | Revenue, and the benchmark for validation |
+| Agent reference data | Agent and platform-user records: identifying code and descriptive attributes | Agent-level attribution and slicing (added October 2026) |
 
 **Data challenges**
 
@@ -38,6 +41,7 @@ Management had limited visibility into the performance of digital platforms:
 - Identifying a dependable primary key across systems
 - Mismatched product codes, caused by closely related codes referring to the same product
 - Date handling: transaction date and issue date did not align, so the correct date had to be chosen per measure
+- Duplicate agent records in the agent reference data, which would have fanned out the revenue rows on join and inflated every agent total
 
 ## 5. Tools & Technologies
 
@@ -58,10 +62,11 @@ Management had limited visibility into the performance of digital platforms:
 4. **Integration** — Joined the quote, policy, product and transaction datasets on validated keys.
 5. **Filtering** — Removed duplicated columns and draft policies so only real business records were counted.
 6. **Classification** — Derived source, channel, product group, product type and quote status, using the policy number structure.
-7. **Aggregation** — Built weekly, monthly and yearly summaries: policy counts, revenue, revenue by product category, revenue by month, and channel and source by product revenue.
-8. **Data-quality checks** — Null checks, duplicate checks, unmatched-key checks and row counts, with results displayed at every transformation stage rather than only at the end.
-9. **Validation** — Compared transformed outputs against the transaction system.
-10. **Delivery & adoption** — Wrote outputs to files and tables in Microsoft Fabric, which Power BI connects to on a scheduled refresh.
+7. **Agent dimension (added October 2026)** — Imported the agent reference table, de-duplicated it to one row per agent code, and joined it to the web revenue table on the agent code carried on the revenue records. The de-duplication came first: joining a dimension that is not unique on its key multiplies the fact rows and quietly inflates every total.
+8. **Aggregation** — Built weekly, monthly and yearly summaries: policy counts, revenue, revenue by product category, revenue by month, and channel and source by product revenue.
+9. **Data-quality checks** — Null checks, duplicate checks, unmatched-key checks and row counts, with results displayed at every transformation stage rather than only at the end.
+10. **Validation** — Compared transformed outputs against the transaction system.
+11. **Delivery & adoption** — Wrote outputs to files and tables in Microsoft Fabric, which Power BI connects to on a scheduled refresh.
 
 ## 7. Key Analysis
 - Product traction across digital platforms
@@ -70,6 +75,8 @@ Management had limited visibility into the performance of digital platforms:
 - Quote-to-policy conversion
 - Trends over time by year and month
 - Platform comparison by revenue
+- Agent-level attribution: revenue and policies by agent, ranked (added October 2026)
+- Agent by product and channel mix, and agent revenue trend over time
 
 ## 8. Key Insights
 The reporting compares how the digital distribution channels (for example a public web journey versus an intermediary portal) contribute to revenue and policy volume, both overall and product by product. It shows which product categories and which individual products drive performance, how that shifts month to month and year on year, and how the portfolio splits between the major categories (motor, travel and household lines) and the long tail of smaller products.
@@ -86,8 +93,9 @@ The reporting compares how the digital distribution channels (for example a publ
 - Seasonality: monthly revenue movement, and which periods are peak and trough
 - Year-on-year direction across the time series
 - Data recency: when the report last refreshed, so stakeholders know how current the figures are
+- Agent-level performance: which agents generate the revenue, what they sell and how that moves over time, with filters and drill-through so users answer their own agent questions
 
-**Decisions enabled** — The reporting was designed to support decisions on which distribution channels and product categories to prioritise and optimise, in order to grow digital revenue and policy volume over time.
+**Decisions enabled** — The reporting was designed to support decisions on which distribution channels and product categories to prioritise and optimise, in order to grow digital revenue and policy volume over time. The agent dimension extends that from channel level down to the individual agent, supporting decisions on where to focus agent engagement and support.
 
 **Measures delivered** — Total revenue across all products, revenue by product category, average revenue by product category, quote-to-policy conversion, and policy counts, across three product categories and two digital channels.
 
@@ -111,6 +119,7 @@ The reporting compares how the digital distribution channels (for example a publ
 | Closely related product codes referring to the same product | Technical / Business | Classified records into product groups rather than relying on raw codes |
 | Transaction date and issue date not aligning | Technical | Chose the appropriate date per measure and applied it consistently |
 | Trusting that transformed numbers were correct | Technical / Business | Reconciled outputs against the transaction system with stakeholders |
+| Duplicate rows in the agent reference table | Technical | De-duplicated to one row per agent code before joining, then re-checked revenue totals against the pre-join figures to confirm nothing had fanned out |
 
 ## 12. Validation & Quality Assurance
 - Total premium reconciled by source against the transaction system
